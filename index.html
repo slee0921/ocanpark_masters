@@ -34,7 +34,7 @@ button{font:inherit;color:inherit;cursor:pointer}
 .prog{position:absolute;left:0;bottom:-1px;height:3px;width:0;background:var(--sea)}
 /* hero */
 .hero{position:relative;min-height:min(86vh,760px);display:grid;align-items:end;overflow:hidden;background:#cfe3ee}
-.hero .ph{position:absolute;inset:0 0 0 38%;background:url(img/cover.jpg) 50% 35%/cover}
+.hero .ph{position:absolute;inset:0 0 0 38%;background:url(cover.jpg) 50% 35%/cover}
 .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(245,243,239,1) 0%,rgba(245,243,239,1) 38%,rgba(245,243,239,0) 62%),linear-gradient(0deg,rgba(245,243,239,1) 0%,rgba(245,243,239,0) 26%)}
 .hero .wrap{position:relative;z-index:1;width:100%;padding-top:70px;padding-bottom:56px}
 .tagline{display:flex;gap:10px;align-items:center;font:800 16px "Inter Tight",sans-serif;color:var(--navy);letter-spacing:.5px}
@@ -165,7 +165,7 @@ svg.i{width:1em;height:1em;stroke:currentColor;fill:none;stroke-width:2;stroke-l
   <div class="sub2 rv"><h3>Recommendations</h3><span class="tag">Webpage</span></div>
   <div class="recs">
     <article class="rec rv"><h4><small>RECOMMENDATION 1</small>Streamlining Navigation</h4>
-      <img class="shot" src="img/rec1.jpg" alt="Mock-up of a streamlined Plan Your Visit page">
+      <img class="shot" src="rec1.jpg" alt="Mock-up of a streamlined Plan Your Visit page">
       <ul><li>Plan Your Visit<ul><li>Opening hours</li><li>Daily schedules</li><li>Transport</li><li>Park Maps</li></ul></li><li>Tickets &amp; Offers</li><li>Attractions &amp; Experiences</li><li>Membership</li><li>Conservation &amp; Education</li></ul></article>
     <article class="rec rv"><h4><small>RECOMMENDATION 2</small>Improving Content Prioritization</h4>
       <div class="pill l">Compact Sections &gt; Discrete Sections</div><div class="pill m">Priortize Selected Promotions</div><div class="pill d">“Buy Ticket” Call-to-Action</div>
@@ -189,8 +189,8 @@ svg.i{width:1em;height:1em;stroke:currentColor;fill:none;stroke-width:2;stroke-l
 
   <div class="sub2 rv"><h3>Social Media Campaign Study</h3><span class="tag">OCEAN PARK - “Panda Monium”</span></div>
   <div class="feature rv">
-    <div><img class="shot" src="img/panda.jpg" alt="Panda twins first birthday campaign poster" style="border:0;border-radius:20px;width:100%">
-      <img src="img/award.jpg" alt="Winner of MarTech APAC NEXT Awards 2026 Hong Kong and iab HK" style="height:96px;width:auto;margin-top:14px;mix-blend-mode:multiply"></div>
+    <div><img class="shot" src="panda.jpg" alt="Panda twins first birthday campaign poster" style="border:0;border-radius:20px;width:100%">
+      <img src="award.jpg" alt="Winner of MarTech APAC NEXT Awards 2026 Hong Kong and iab HK" style="height:96px;width:auto;margin-top:14px;mix-blend-mode:multiply"></div>
     <div style="display:grid;gap:16px">
       <div class="card"><h6>“PANDA FAMILY”</h6><ul><li>Panda family: Ying ying, Le le (the parents); Jia jia, De de (twins, born in HK); An an, Ke ke (new arrivals)</li><li>Personification of pandas</li></ul></div>
       <div class="card mid"><h6>OMNI-STRATEGY</h6><ul><li>As mentioned, the social media matrix of Ocean Park covers large variety of consumer segments.</li></ul></div>
@@ -202,7 +202,7 @@ svg.i{width:1em;height:1em;stroke:currentColor;fill:none;stroke-width:2;stroke-l
       <div class="stats" style="margin:6px 0 16px"><div class="stat"><i data-i="eye" style="font-size:30px"></i><b>29.8M</b></div><div class="stat"><i data-i="phone" style="font-size:30px"></i><b>17.6M</b></div><div class="stat"><i data-i="thumb" style="font-size:30px"></i><b>21.4K</b></div></div>
       <ul><li>Streamed the panda twins’ first birthday party across major platforms</li><li>Reached both mainland, local, and international audiences → supported global brand awareness</li><li>Live format also encouraged real-time engagement and social buzz.</li></ul></div>
     <div class="panel rv"><div class="sec"><span class="num s">02</span><h4>DEDICATED ACCOUNT: @PANDAHKOFFICIAL</h4></div>
-      <div style="display:flex;gap:20px;align-items:center;margin:6px 0 16px;flex-wrap:wrap"><img class="shot" src="img/phk.jpg" alt="@pandahkofficial profile" style="height:100px;width:auto;border:0">
+      <div style="display:flex;gap:20px;align-items:center;margin:6px 0 16px;flex-wrap:wrap"><img class="shot" src="phk.jpg" alt="@pandahkofficial profile" style="height:100px;width:auto;border:0">
         <div class="stats"><div class="stat"><i data-i="userplus" style="font-size:30px"></i><b>75K</b></div><div class="stat"><i data-i="thumb" style="font-size:30px"></i><b>1.7+M</b></div></div></div>
       <ul><li>Build distinctive brand IP through personalities, family roles and human-like emotion</li><li>Creates an emotional connection</li><li>Maintains long-term engagement through regular update - “virtual panda raising”→ Consumer Loyalty</li></ul></div>
   </div>
@@ -324,7 +324,7 @@ const ISS=[
  ib:'<li>Visitors seeking general info are forced into a transaction page prematurely.</li><li>Perceived loading delays and interface friction lead to <b>user abandonment</b> and <b>reduced confidence</b>.</li>',im:['i4a','i4b']}];
 document.getElementById('issues').innerHTML=ISS.map((d,i)=>`<article class="row rv${i%2?' flip':''}">
  <div><h4><small>ISSUE ${i+1}</small>${d.t}</h4><div class="card"><h5>THE PROBLEM</h5><h6>${d.p}</h6><ul>${d.pb}</ul></div><div class="flow">${svgI('chev')}</div><div class="card dark"><h5>IMPACT</h5><ul>${d.ib}</ul></div></div>
- <div class="shots">${d.im.map(k=>`<img class="shot" src="img/${k}.jpg" alt="Screenshot for issue ${i+1}" style="${d.im.length>1?'max-width:48%':''}">`).join('')}</div></article>`).join('');
+ <div class="shots">${d.im.map(k=>`<img class="shot" src="${k}.jpg" alt="Screenshot for issue ${i+1}" style="${d.im.length>1?'max-width:48%':''}">`).join('')}</div></article>`).join('');
 
 /* platforms */
 const PL=[
@@ -335,7 +335,7 @@ const PL=[
 const tabs=document.getElementById('tabs'),pp=document.getElementById('platPanel');
 tabs.innerHTML=PL.map((d,i)=>`<button role="tab" id="tab${i}" aria-selected="${i===0}" aria-controls="platPanel"><span class="dot" style="background:${d.c}"></span>${d.n}</button>`).join('');
 function plat(i){const d=PL[i];tabs.querySelectorAll('button').forEach((b,k)=>b.setAttribute('aria-selected',k===i));pp.setAttribute('aria-labelledby','tab'+i);
- pp.innerHTML=`<div class="plat"><div class="imgs">${d.im.map(k=>`<img class="shot" src="img/${k}.jpg" alt="${d.n} screenshot">`).join('')}</div>
+ pp.innerHTML=`<div class="plat"><div class="imgs">${d.im.map(k=>`<img class="shot" src="${k}.jpg" alt="${d.n} screenshot">`).join('')}</div>
  <div>${d.r.map((r,j)=>`<div class="pt"><span class="num">0${j+1}</span><div>${r[0]?`<b>${r[0]}</b>`:''}${r[1]}</div></div>`).join('')}</div></div>`;}
 tabs.addEventListener('click',e=>{const b=e.target.closest('button');if(b)plat([...tabs.children].indexOf(b))});
 tabs.addEventListener('keydown',e=>{const bs=[...tabs.children],i=bs.indexOf(document.activeElement);if(i<0)return;if(e.key==='ArrowRight'||e.key==='ArrowLeft'){e.preventDefault();const n=(i+(e.key==='ArrowRight'?1:3))%4;plat(n);bs[n].focus()}});
